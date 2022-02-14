@@ -34,12 +34,53 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
+  margin: 0;
+  padding: 0;
   color: var(--text-dark-grey);
+}
+
+p {
+  color: inherit;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header .container,
+.header nav,
+.header ul {
+  display: flex;
+  /* align-items: center; */
+}
+
+.header .container {
+  justify-content: space-between;
+  /* align-items: center; */
+}
+.header li {
+  margin-right: 55px;
+  padding-top: 33px;
+}
+
+.header li:last-child {
+  margin-right: 0px;
 }
 
 /* header styles ------------------------------- */
 .header {
+  height: 80px;
   font-weight: 500;
   line-height: calc(16 / 14); /* 1.14 = calc(16/14) */
   letter-spacing: 0.02em;
@@ -63,13 +104,20 @@ h6 {
   color: var(--akcent-color);
 }
 
+/* main ------------------------ */
 .content {
   color: inherit; /**/
 }
 
 /* hero styles --------------------------------- */
 .hero {
+  /* padding: 200px 400px; */
   background-color: var(--hero-bg-color);
+}
+
+.hero-container {
+  /* width: inherit; */
+  padding: 200px 235px;
 }
 
 .hero-title {
@@ -85,7 +133,13 @@ h6 {
   color: var(--text-white);
 }
 
+.hero-button-box {
+  text-align: center;
+}
+
 .hero-button {
+  display: inline-block;
+  min-width: 200px;
   font-family: Roboto;
   font-style: normal;
   font-weight: 700;
@@ -93,12 +147,12 @@ h6 {
   line-height: 1.87;
   /* identical to box height, or 187% */
   letter-spacing: 0.06em;
-
+  /*  */
   text-align: center;
-
+  /*  */
   color: var(--text-white);
   background-color: var(--akcent-color);
-
+  /*  */
   cursor: pointer;
 }
 
@@ -120,6 +174,10 @@ h6 {
   line-height: calc(24 / 14);
 }
 
+.features-item {
+  display: inline-block;
+  width: 200px; /*!!!!!!!!!!*/
+}
 /* ourwork ------------------------------------- */
 .ourworks {
   color: inherit; /**/
@@ -132,9 +190,17 @@ h6 {
   text-align: center;
 }
 
+.ourworks-item {
+  display: inline-block;
+}
+
 /* ourteam -------------------------------------- */
 .ourteam {
   background-color: var(--our-team-bg-color);
+}
+
+.ourteam-card {
+  display: inline-block;
 }
 
 .ourteam-card-title,
@@ -174,6 +240,7 @@ h6 {
 /* logo ----------------------------- */
 .header-logo,
 .footer-logo {
+  margin-right: 95px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26pt;
