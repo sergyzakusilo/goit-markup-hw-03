@@ -1,0 +1,236 @@
+:root {
+  --main-text-color: #757575;
+  --text-dark-grey: #212121;
+  --text-black: #000000;
+  --text-white: #ffffff;
+  --text-white-alpha: rgba(255, 255, 255, 0.6);
+  --akcent-color: #2196f3;
+  --hero-bg-color: #2f303a;
+  --hero-button-bg-color: #188ce8;
+  --our-team-bg-color: #f5f4fa;
+  /* --footer-bg-color: #2F303A; */
+}
+
+body {
+  font-family: 'Roboto', 'sans serif';
+  font-size: 14px;
+  line-height: calc(24 / 14); /*1,71*/
+  letter-spacing: 0.03em;
+
+  color: var(--main-text-color);
+  background-color: var(--text-white);
+}
+
+a {
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-dark-grey);
+}
+
+/* header styles ------------------------------- */
+.header {
+  font-weight: 500;
+  line-height: calc(16 / 14); /* 1.14 = calc(16/14) */
+  letter-spacing: 0.02em;
+}
+
+.nav-link {
+  color: var(--text-dark-grey);
+}
+
+.header-email,
+.header-phone {
+  color: var(--main-text-color);
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.header-email:hover,
+.header-email:focus,
+.header-phone:hover,
+.header-phone:focus {
+  color: var(--akcent-color);
+}
+
+.content {
+  color: inherit; /**/
+}
+
+/* hero styles --------------------------------- */
+.hero {
+  background-color: var(--hero-bg-color);
+}
+
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  /* or 136% */
+  letter-spacing: 0.06em;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--text-white);
+}
+
+.hero-button {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  /* identical to box height, or 187% */
+  letter-spacing: 0.06em;
+
+  text-align: center;
+
+  color: var(--text-white);
+  background-color: var(--akcent-color);
+
+  cursor: pointer;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--hero-button-bg-color);
+}
+
+/* features style ------------------------------- */
+.features {
+  color: inherit; /**/
+}
+
+.features-title {
+  line-height: calc(16 / 14);
+}
+
+.features-text {
+  line-height: calc(24 / 14);
+}
+
+/* ourwork ------------------------------------- */
+.ourworks {
+  color: inherit; /**/
+}
+
+.ourwork-title,
+.ourteam-title {
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+}
+
+/* ourteam -------------------------------------- */
+.ourteam {
+  background-color: var(--our-team-bg-color);
+}
+
+.ourteam-card-title,
+.ourteam-card-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  /* identical to box height */
+
+  text-align: center;
+}
+
+.ourteam-card-text {
+  font-weight: 400;
+}
+
+/* footer --------------------------------------- */
+.footer {
+  background-color: var(--hero-bg-color);
+}
+
+.footer-link,
+.footer-link-street {
+  line-height: calc(16 / 14);
+  color: var(--text-white-alpha);
+}
+
+.footer-link-street {
+  color: var(--text-white);
+}
+
+.footer-link:hover,
+.footer-link-street:hover {
+  color: var(--akcent-color);
+}
+
+/* logo ----------------------------- */
+.header-logo,
+.footer-logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26pt;
+  line-height: calc(31 / 26);
+}
+.header-logo-left,
+.footer-logo-left {
+  color: var(--akcent-color);
+}
+.header-logo-rigth {
+  color: var(--text-black);
+}
+.footer-logo-rigth {
+  color: var(--text-white);
+  /* background-color: #2f303a; !! */
+}
+
+/* portfolio page ------------------------- */
+/* ---------------------------------------- */
+.project-card-link {
+  color: var(--main-text-color);
+}
+
+.project-card-title {
+  font-size: 18px;
+  line-height: calc(36 / 18);
+  /* identical to box height, or 200% */
+  letter-spacing: 0.06em;
+}
+
+.project-card-text {
+  font-size: 16px;
+  line-height: calc(30 / 16);
+}
+
+.filter-button {
+  font-family: 'Roboto', 'sans serif';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(26 / 16);
+  /* identical to box height, or 162% */
+  /*  */
+  text-align: center;
+  /*  */
+  color: var(--text-dark-grey);
+  background-color: var(--our-team-bg-color);
+  /**/
+  cursor: pointer;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  color: var(--text-white);
+  background-color: var(--akcent-color);
+}
+
+/* common styles ------------------------------- */
+.current-page-link {
+  color: var(--akcent-color);
+}
