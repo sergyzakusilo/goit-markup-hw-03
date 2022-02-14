@@ -12,7 +12,7 @@
 }
 
 body {
-  font-family: 'Roboto', 'sans serif';
+  font-family: "Roboto", "sans serif";
   font-size: 14px;
   line-height: calc(24 / 14); /*1,71*/
   letter-spacing: 0.03em;
@@ -174,7 +174,7 @@ h6 {
 /* logo ----------------------------- */
 .header-logo,
 .footer-logo {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26pt;
   line-height: calc(31 / 26);
@@ -210,7 +210,7 @@ h6 {
 }
 
 .filter-button {
-  font-family: 'Roboto', 'sans serif';
+  font-family: "Roboto", "sans serif";
   font-weight: 500;
   font-size: 16px;
   line-height: calc(26 / 16);
