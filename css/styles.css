@@ -311,7 +311,26 @@ ol {
   flex-wrap: wrap;
 }
 
+.ourworks-list {
+  display: flex;
+}
+
+.ourworks-item {
+  /* display: block; */
+  margin-right: 30px; /**/
+  /* width: calc((100% - 60) / 3); */
+  /* width: 370px; */
+}
+
+.ourworks-item:last-child {
+  margin-right: 0px;
+}
+
 /* common styles ------------------------------- */
 .current-page-link {
   color: var(--akcent-color);
+}
+
+img {
+  display: block;
 }
