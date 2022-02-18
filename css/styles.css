@@ -58,6 +58,36 @@ ol {
   padding: 0 15px;
 }
 
+/* logo ----------------------------- */
+.header-logo,
+.footer-logo {
+  margin-right: 95px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26pt;
+  line-height: calc(31 / 26);
+}
+.header-logo-left,
+.footer-logo-left {
+  color: var(--akcent-color);
+}
+.header-logo-rigth {
+  color: var(--text-black);
+}
+.footer-logo-rigth {
+  color: var(--text-white);
+  /* background-color: #2f303a; !! */
+}
+
+/* header styles ---------------------*/
+/* ---------------------------------- */
+.header {
+  height: 80px;
+  font-weight: 500;
+  line-height: calc(16 / 14); /* 1.14 = calc(16/14) */
+  letter-spacing: 0.02em;
+}
+
 .header .container,
 .header nav,
 .header ul {
@@ -69,6 +99,7 @@ ol {
   justify-content: space-between;
   /* align-items: center; */
 }
+
 .header li {
   margin-right: 55px;
   padding-top: 33px;
@@ -76,14 +107,6 @@ ol {
 
 .header li:last-child {
   margin-right: 0px;
-}
-
-/* header styles ------------------------------- */
-.header {
-  height: 80px;
-  font-weight: 500;
-  line-height: calc(16 / 14); /* 1.14 = calc(16/14) */
-  letter-spacing: 0.02em;
 }
 
 .nav-link {
@@ -111,6 +134,7 @@ ol {
 
 /* hero styles --------------------------------- */
 .hero {
+  text-align: center;
   /* padding: 200px 400px; */
   background-color: var(--hero-bg-color);
 }
@@ -127,7 +151,7 @@ ol {
   /* or 136% */
   letter-spacing: 0.06em;
 
-  text-align: center;
+  /* text-align: center; */
   text-transform: uppercase;
 
   color: var(--text-white);
@@ -237,27 +261,7 @@ ol {
   color: var(--akcent-color);
 }
 
-/* logo ----------------------------- */
-.header-logo,
-.footer-logo {
-  margin-right: 95px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26pt;
-  line-height: calc(31 / 26);
-}
-.header-logo-left,
-.footer-logo-left {
-  color: var(--akcent-color);
-}
-.header-logo-rigth {
-  color: var(--text-black);
-}
-.footer-logo-rigth {
-  color: var(--text-white);
-  /* background-color: #2f303a; !! */
-}
-
+/* ---------------------------------------- */
 /* portfolio page ------------------------- */
 /* ---------------------------------------- */
 .project-card-link {
@@ -274,6 +278,11 @@ ol {
 .project-card-text {
   font-size: 16px;
   line-height: calc(30 / 16);
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
 }
 
 .filter-button {
@@ -295,6 +304,11 @@ ol {
 .filter-button:focus {
   color: var(--text-white);
   background-color: var(--akcent-color);
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* common styles ------------------------------- */
