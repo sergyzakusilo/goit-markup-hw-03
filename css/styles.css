@@ -8,6 +8,8 @@
   --hero-bg-color: #2f303a;
   --hero-button-bg-color: #188ce8;
   --our-team-bg-color: #f5f4fa;
+  --header-border-color: #ececec;
+  --portfolio-prj-card-border-color: #eeeeee;
   /* --footer-bg-color: #2F303A; */
 }
 
@@ -16,7 +18,7 @@ body {
   font-size: 14px;
   line-height: calc(24 / 14); /*1,71*/
   letter-spacing: 0.03em;
-
+  /*  */
   color: var(--main-text-color);
   background-color: var(--text-white);
 }
@@ -29,6 +31,11 @@ address {
   font-style: normal;
 }
 
+address a {
+  display: block;
+  margin-bottom: 9px;
+}
+
 h1,
 h2,
 h3,
@@ -39,6 +46,11 @@ p {
   margin: 0;
   padding: 0;
   color: var(--text-dark-grey);
+}
+
+.ourworks h2,
+.ourteam h2 {
+  margin-bottom: 50px;
 }
 
 p {
@@ -55,7 +67,7 @@ ol {
 .container {
   width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 94px 15px;
 }
 
 /* logo ----------------------------- */
@@ -66,6 +78,10 @@ ol {
   font-weight: 700;
   font-size: 26pt;
   line-height: calc(31 / 26);
+}
+.footer-logo {
+  display: block;
+  margin-bottom: 20px;
 }
 .header-logo-left,
 .footer-logo-left {
@@ -82,27 +98,32 @@ ol {
 /* header styles ---------------------*/
 /* ---------------------------------- */
 .header {
-  height: 80px;
+  /* height: 80px; */
   font-weight: 500;
   line-height: calc(16 / 14); /* 1.14 = calc(16/14) */
   letter-spacing: 0.02em;
+  /* border */
+  border: 1px solid var(--header-border-color);
 }
 
 .header .container,
 .header nav,
 .header ul {
   display: flex;
-  /* align-items: center; */
+  align-items: center;
 }
 
 .header .container {
+  padding-top: 0;
+  padding-bottom: 0;
   justify-content: space-between;
-  /* align-items: center; */
 }
 
 .header li {
+  padding-top: 32px;
+  padding-bottom: 32px;
   margin-right: 55px;
-  padding-top: 33px;
+  /* padding-top: 33px; */
 }
 
 .header li:last-child {
@@ -145,6 +166,8 @@ ol {
 }
 
 .hero-title {
+  margin-bottom: 30px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -191,7 +214,12 @@ ol {
 }
 
 .features-title {
+  margin-bottom: 10px;
   line-height: calc(16 / 14);
+}
+
+.features-list {
+  display: flex;
 }
 
 .features-text {
@@ -199,12 +227,17 @@ ol {
 }
 
 .features-item {
-  display: inline-block;
-  width: 200px; /*!!!!!!!!!!*/
+  /* display: inline-block; */
+  display: block;
+  width: 270px; /*!!!!!!!!!!*/
 }
 /* ourwork ------------------------------------- */
 .ourworks {
   color: inherit; /**/
+}
+
+.ourworks .container {
+  padding-top: 0;
 }
 
 .ourwork-title,
@@ -214,17 +247,44 @@ ol {
   text-align: center;
 }
 
-.ourworks-item {
-  display: inline-block;
+.ourworks-list,
+.ourteam-list {
+  display: flex;
 }
 
+.features-item,
+.ourworks-item,
+.ourteam-card,
+.project-card {
+  margin-right: 30px; /**/
+  /* width: calc((100% - 60) / 3); */
+  /* prj = width: 370px; */
+  /* team= width: 270px; */
+}
+
+.features-item:last-child,
+.ourworks-item:last-child,
+.ourteam-card:last-child,
+.project-card:last-child {
+  margin-right: 0px;
+}
+
+/* project cards list special margins ========================= */
+.project-card {
+  margin-bottom: 30px;
+}
+.project-card:nth-child(3n) {
+  margin-right: 0px;
+}
+.project-card:nth-child(n + 7) {
+  margin-bottom: 0px;
+}
 /* ourteam -------------------------------------- */
 .ourteam {
   background-color: var(--our-team-bg-color);
 }
-
-.ourteam-card {
-  display: inline-block;
+.ourteam-card-img {
+  margin-bottom: 30px;
 }
 
 .ourteam-card-title,
@@ -237,13 +297,31 @@ ol {
   text-align: center;
 }
 
+.ourteam-card-title {
+  margin-bottom: 10px;
+}
+
 .ourteam-card-text {
   font-weight: 400;
+}
+
+.ourteam-card {
+  padding-bottom: 30px;
+  background-color: var(--text-white);
+  /* material shadow v1 */
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 /* footer --------------------------------------- */
 .footer {
   background-color: var(--hero-bg-color);
+}
+
+.footer .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer-link,
@@ -264,6 +342,61 @@ ol {
 /* ---------------------------------------- */
 /* portfolio page ------------------------- */
 /* ---------------------------------------- */
+
+.filter {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.button-generic {
+  /*  */
+  text-align: center;
+  /*  */
+  cursor: pointer;
+  /**/
+  border: none;
+  border-radius: 4px;
+}
+
+.filter-button {
+  padding: 6px 22px;
+  font-family: "Roboto", "sans serif";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(26 / 16);
+  /* identical to box height, or 162% */
+  color: var(--text-dark-grey);
+  background-color: var(--our-team-bg-color);
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  color: var(--text-white);
+  background-color: var(--akcent-color);
+  /* shadow-middle */
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.filter-item + .filter-item {
+  margin-left: 8px;
+}
+
+/* ================================== */
+.project-card {
+  /* box-sizing: border-box; */
+}
+.project-card-footer {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /*  */
+  border-left: 1px solid var(--portfolio-prj-card-border-color);
+  border-right: 1px solid var(--portfolio-prj-card-border-color);
+  border-bottom: 1px solid var(--portfolio-prj-card-border-color);
+}
 .project-card-link {
   color: var(--main-text-color);
 }
@@ -280,50 +413,9 @@ ol {
   line-height: calc(30 / 16);
 }
 
-.filter {
-  display: flex;
-  justify-content: center;
-}
-
-.filter-button {
-  font-family: "Roboto", "sans serif";
-  font-weight: 500;
-  font-size: 16px;
-  line-height: calc(26 / 16);
-  /* identical to box height, or 162% */
-  /*  */
-  text-align: center;
-  /*  */
-  color: var(--text-dark-grey);
-  background-color: var(--our-team-bg-color);
-  /**/
-  cursor: pointer;
-}
-
-.filter-button:hover,
-.filter-button:focus {
-  color: var(--text-white);
-  background-color: var(--akcent-color);
-}
-
 .project-list {
   display: flex;
   flex-wrap: wrap;
-}
-
-.ourworks-list {
-  display: flex;
-}
-
-.ourworks-item {
-  /* display: block; */
-  margin-right: 30px; /**/
-  /* width: calc((100% - 60) / 3); */
-  /* width: 370px; */
-}
-
-.ourworks-item:last-child {
-  margin-right: 0px;
 }
 
 /* common styles ------------------------------- */
