@@ -33,7 +33,7 @@ address {
 
 address a {
   display: block;
-  margin-bottom: 9px;
+  /* margin-bottom: 9px; */
 }
 
 h1,
@@ -67,17 +67,25 @@ ol {
 .container {
   width: 1200px;
   margin: 0 auto;
-  padding: 94px 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 /* logo ----------------------------- */
 .header-logo,
 .footer-logo {
-  margin-right: 95px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26pt;
+  font-size: 26px;
   line-height: calc(31 / 26);
+}
+.header-logo {
+  margin-right: 93px;
 }
 .footer-logo {
   display: block;
@@ -91,6 +99,7 @@ ol {
   color: var(--text-black);
 }
 .footer-logo-rigth {
+  /* margin-right: 0px; */
   color: var(--text-white);
   /* background-color: #2f303a; !! */
 }
@@ -103,7 +112,7 @@ ol {
   line-height: calc(16 / 14); /* 1.14 = calc(16/14) */
   letter-spacing: 0.02em;
   /* border */
-  border: 1px solid var(--header-border-color);
+  border-bottom: 1px solid var(--header-border-color);
 }
 
 .header .container,
@@ -120,8 +129,8 @@ ol {
 }
 
 .header li {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  /* padding-top: 32px; */
+  /* padding-bottom: 32px; */
   margin-right: 55px;
   /* padding-top: 33px; */
 }
@@ -130,12 +139,20 @@ ol {
   margin-right: 0px;
 }
 
-.nav-link {
+.nav-link,
+.header-email,
+.header-phone {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--text-dark-grey);
 }
 
 .header-email,
 .header-phone {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  /*  */
   color: var(--main-text-color);
 }
 
@@ -155,19 +172,19 @@ ol {
 
 /* hero styles --------------------------------- */
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
   text-align: center;
   /* padding: 200px 400px; */
   background-color: var(--hero-bg-color);
 }
 
-.hero-container {
-  /* width: inherit; */
-  padding: 200px 235px;
-}
-
 .hero-title {
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
-
+  /*  */
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -187,6 +204,8 @@ ol {
 .hero-button {
   display: inline-block;
   min-width: 200px;
+  padding: 10px 32px;
+  /*  */
   font-family: Roboto;
   font-style: normal;
   font-weight: 700;
@@ -197,6 +216,9 @@ ol {
   /*  */
   text-align: center;
   /*  */
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px; /*  */
   color: var(--text-white);
   background-color: var(--akcent-color);
   /*  */
@@ -233,6 +255,7 @@ ol {
 }
 /* ourwork ------------------------------------- */
 .ourworks {
+  padding-top: 0px;
   color: inherit; /**/
 }
 
@@ -302,11 +325,12 @@ ol {
 }
 
 .ourteam-card-text {
+  margin-bottom: 30px;
   font-weight: 400;
 }
 
 .ourteam-card {
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
   background-color: var(--text-white);
   /* material shadow v1 */
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -316,12 +340,13 @@ ol {
 
 /* footer --------------------------------------- */
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--hero-bg-color);
 }
 
-.footer .container {
-  padding-top: 60px;
-  padding-bottom: 60px;
+.footer-item + .footer-item {
+  margin-top: 9px;
 }
 
 .footer-link,
@@ -402,6 +427,7 @@ ol {
 }
 
 .project-card-title {
+  margin-bottom: 4px;
   font-size: 18px;
   line-height: calc(36 / 18);
   /* identical to box height, or 200% */
@@ -425,4 +451,6 @@ ol {
 
 img {
   display: block;
+  width: 100%;
+  height: auto;
 }
